@@ -22,13 +22,14 @@
 
 ## 📸 Screenshots
 
-> _Add screenshots of the extension here — editor with live preview, dark mode, and zen mode views._
+<img width="1265" height="914" alt="Screenshot_2026-07-09_18-09-22" src="https://github.com/user-attachments/assets/72e0688d-5c94-41ee-a07f-d027127453d6" />
 
 ## 🚀 Installation
 
 ### Via AMO (recommended)
 
-[Install from Firefox Add-ons Store](https://addons.mozilla.org/.../mynotefoxy)
+on review...
+<!-- [Install from Firefox Add-ons Store](https://addons.mozilla.org/.../mynotefoxy) -->
 
 ### From source (temporary)
 
