@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyNoteFoxy</title>
+  <link rel="stylesheet" href="newtab.css">
+</head>
+<body>
+  <div id="app">
+    <header id="toolbar">
+      <div class="toolbar-left">
+        <button class="tool-btn" data-action="bold" title="Negrito (Ctrl+B)"><strong>B</strong></button>
+        <button class="tool-btn" data-action="italic" title="Itálico (Ctrl+I)"><em>I</em></button>
+        <button class="tool-btn" data-action="strike" title="Riscado"><s>S</s></button>
+        <span class="sep"></span>
+        <button class="tool-btn" data-action="heading" title="Título (##)">H</button>
+        <span class="sep"></span>
+        <button class="tool-btn" data-action="ul" title="Lista">≡</button>
+        <button class="tool-btn" data-action="ol" title="Lista numerada">1.</button>
+        <button class="tool-btn" data-action="task" title="Tarefa ☐">☐</button>
+        <span class="sep"></span>
+        <button class="tool-btn" data-action="link" title="Link">🔗</button>
+        <button class="tool-btn" data-action="code" title="Código">&lt;/&gt;</button>
+      </div>
+      <div class="toolbar-right">
+        <button class="tool-btn" id="btn-search" title="Buscar (Ctrl+F)">🔍</button>
+        <span class="sep"></span>
+        <button class="tool-btn" id="btn-export-md" title="Exportar .md">↓MD</button>
+        <button class="tool-btn" id="btn-export-txt" title="Exportar .txt">↓TXT</button>
+        <button class="tool-btn" id="btn-copy" title="Copiar para área de transferência">📋</button>
+        <span class="sep"></span>
+        <button class="tool-btn" id="btn-zen" title="Modo Zen">✧</button>
+      </div>
+    </header>
+
+    <div id="search-bar" class="hidden">
+      <input type="text" id="search-input" placeholder="Buscar na nota..." spellcheck="false">
+      <span id="search-count"></span>
+      <button class="tool-btn" id="search-close" title="Fechar busca">✕</button>
+    </div>
+
+    <main id="main">
+      <div id="editor-pane">
+        <textarea id="editor" placeholder="Comece a escrever sua nota em Markdown...
+
+**Negrito**, *itálico*, ~~riscado~~
+# Título
+- Lista
+- [ ] Tarefa
+[Links](url)"></textarea>
+      </div>
+      <div id="preview-pane">
+        <div id="preview"></div>
+      </div>
+      <div id="divider" title="Arrastar para redimensionar"></div>
+    </main>
+
+    <footer id="status-bar">
+      <span id="status">✓ Salvo</span>
+      <span id="word-count"></span>
+    </footer>
+  </div>
+
+  <script src="newtab.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "MyNoteFoxy",
+  "version": "1.0.0",
+  "description": "Bloco de notas Markdown persistente na nova aba. Escreva, organize, busque e exporte suas anotações com elegância.",
+  "permissions": [
+    "storage",
+    "contextMenus"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "mynotefoxy@extension",
+      "strict_min_version": "112.0"
+    }
+  }
+}
