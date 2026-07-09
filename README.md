@@ -38,12 +38,6 @@ on review...
 3. Click **"Load Temporary Add-on"**
 4. Select the `manifest.json` file
 
-## 📦 Packaging for submission
-
-```bash
-zip -j mynotefoxy.zip manifest.json background.js newtab.html newtab.js newtab.css icon-48.png icon-96.png icon-128.png
-```
-
 ## ⌨️ Keyboard shortcuts
 
 | Shortcut       | Action                         |
