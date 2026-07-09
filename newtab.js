@@ -174,10 +174,20 @@ function inlineFormat(text) {
 
 /* ===================== Preview ===================== */
 
+function setPreviewContent(html) {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(`<div>${html}</div>`, 'text/html');
+  const container = doc.body.firstElementChild;
+  preview.textContent = '';
+  while (container.firstChild) {
+    preview.appendChild(container.firstChild);
+  }
+}
+
 function renderPreview() {
   const html = renderMarkdown(editor.value);
   cleanHTML = html;
-  preview.innerHTML = html;
+  setPreviewContent(html);
   applySearch();
 }
 
@@ -197,12 +207,12 @@ function updateStatusBar() {
 function applySearch() {
   const query = searchInput.value.trim();
   if (!query) {
-    preview.innerHTML = cleanHTML;
+    setPreviewContent(cleanHTML);
     searchCount.textContent = '';
     return;
   }
 
-  preview.innerHTML = cleanHTML;
+  setPreviewContent(cleanHTML);
   const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const regex = new RegExp(escaped, 'gi');
 
@@ -517,7 +527,7 @@ function hideSearch() {
   searchBar.classList.add('hidden');
   searchInput.value = '';
   searchCount.textContent = '';
-  preview.innerHTML = cleanHTML;
+  setPreviewContent(cleanHTML);
 }
 
 // Export

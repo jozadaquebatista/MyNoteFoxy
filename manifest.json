@@ -3,6 +3,12 @@
   "name": "MyNoteFoxy",
   "version": "1.0.0",
   "description": "Bloco de notas Markdown persistente na nova aba. Escreva, organize, busque e exporte suas anotações com elegância.",
+  "homepage_url": "https://github.com/jozadaquebatista/MyNoteFoxy",
+  "icons": {
+    "48": "icon-48.png",
+    "96": "icon-96.png",
+    "128": "icon-128.png"
+  },
   "permissions": [
     "storage",
     "contextMenus"
@@ -16,7 +22,10 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "mynotefoxy@extension",
-      "strict_min_version": "112.0"
+      "strict_min_version": "142.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
     }
   }
 }
