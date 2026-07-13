@@ -28,8 +28,7 @@
 
 ### Via AMO (recommended)
 
-on review...
-<!-- [Install from Firefox Add-ons Store](https://addons.mozilla.org/.../mynotefoxy) -->
+[Install from Firefox Add-ons Store](https://addons.mozilla.org/en-US/firefox/addon/mynotefoxy)
 
 ### From source (temporary)
 
